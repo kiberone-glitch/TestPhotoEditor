@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>🔄 Конвертер</h2>
+<p>Метры → километры</p>
+
+<form method="post">
+    <input type="number" step="any" name="value" placeholder="Метры" required>
+    <button>Конвертировать</button>
+</form>
+
+{% if result %}
+<p class="result">Это {{ result }} км 🚀</p>
+{% endif %}
+{% endblock %}
