@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>⏱️ Таймер</h2>
+
+<input type="number" id="seconds" placeholder="Секунды">
+<button onclick="startTimer()">Старт</button>
+
+<p id="output"></p>
+
+<script>
+function startTimer() {
+    let s = document.getElementById("seconds").value;
+    let out = document.getElementById("output");
+
+    let interval = setInterval(() => {
+        if (s <= 0) {
+            out.innerHTML = "⏰ Время вышло!";
+            clearInterval(interval);
+        } else {
+            out.innerHTML = "Осталось: " + s + " сек.";
+            s--;
+        }
+    }, 1000);
+}
+</script>
+{% endblock %}
