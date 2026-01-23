@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Apps</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🌟 Мои мини-приложения</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/calculator">Калькулятор</a>
+            <a href="/timer">Таймер</a>
+            <a href="/converter">Конвертер</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
